@@ -7,6 +7,7 @@ import android.databinding.ObservableField
 
 class MainActivityViewModel(application: Application) : AndroidViewModel(application) {
 
+    // Varibale declaration
     var title: ObservableField<String>
     var userName: ObservableField<String>
     var password: ObservableField<String>
@@ -15,6 +16,9 @@ class MainActivityViewModel(application: Application) : AndroidViewModel(applica
     val signInResult: MutableLiveData<Boolean> = MutableLiveData()
 
 
+    /**
+     *  Initializing values in below block
+     */
     init {
         title = ObservableField()
         title.set("Kamal")
@@ -25,17 +29,17 @@ class MainActivityViewModel(application: Application) : AndroidViewModel(applica
     }
 
 
+    /**
+     *  Method to handle sign in click, which will be called from UI via interface method
+     *  This method compares value entered by user in edit text with static user name and password as of now
+     */
     fun signInClick() {
         if (!userName.get().toString().equals("") && userName.get().toString().equals("kamal")) {
             if (!password.get().toString().equals("") && password.get().toString().equals("123")) {
-
+                //Posting value in Sign in result, which will in turn call Onchanged() method which is being Observed in the main activity
                 signInResult.postValue(true)
             }
         }
-    }
-
-    fun cancelClick() {
-
     }
 
 }
