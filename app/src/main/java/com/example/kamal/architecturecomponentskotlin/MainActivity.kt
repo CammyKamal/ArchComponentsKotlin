@@ -59,6 +59,7 @@ class MainActivity : BaseActivity(), LoginClickCallback {
                     mainActivityViewModel.passwordHint.set(false)
                 else
                     mainActivityViewModel.passwordHint.set(true)
+
             }
         })
 
