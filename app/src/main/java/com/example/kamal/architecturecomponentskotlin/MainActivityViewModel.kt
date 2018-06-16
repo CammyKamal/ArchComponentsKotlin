@@ -42,4 +42,12 @@ class MainActivityViewModel(application: Application) : BaseViewModel(applicatio
         }
     }
 
+     fun onUserNameTextChanged(s: CharSequence,start: Int,before : Int,count :Int){
+        userName.set(s.toString())
+    }
+
+    fun onPasswordTextChanged(s: CharSequence,start: Int,before : Int,count :Int){
+        password.set(s.toString())
+    }
+
 }

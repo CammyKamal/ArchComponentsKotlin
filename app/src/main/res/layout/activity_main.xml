@@ -48,6 +48,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Username"
+                android:onTextChanged="@{model.onUserNameTextChanged}"
                 android:inputType="text" />
 
             <TextView
@@ -65,6 +66,7 @@
                 android:layout_below="@+id/username_et"
                 android:layout_marginTop="10dp"
                 android:hint="Password"
+                android:onTextChanged="@{model.onPasswordTextChanged}"
                 android:inputType="textPassword" />
 
             <Button
