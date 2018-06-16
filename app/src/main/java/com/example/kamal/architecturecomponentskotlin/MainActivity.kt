@@ -69,6 +69,7 @@ class MainActivity : BaseActivity(), LoginClickCallback {
             else
                 Toast.makeText(this, "Login Fail", Toast.LENGTH_LONG).show()
         })
+
     }
 
 
