@@ -1,11 +1,11 @@
 package com.example.kamal.architecturecomponentskotlin
 
 import android.app.Application
-import android.arch.lifecycle.AndroidViewModel
 import android.arch.lifecycle.MutableLiveData
 import android.databinding.ObservableField
+import com.example.kamal.architecturecomponentskotlin.core.BaseViewModel
 
-class MainActivityViewModel(application: Application) : AndroidViewModel(application) {
+class MainActivityViewModel(application: Application) : BaseViewModel(application) {
 
     // Varibale declaration
     var title: ObservableField<String>
